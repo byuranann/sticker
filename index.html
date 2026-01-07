@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            background: linear-gradient(135deg, #d5c663 0%, #f1f8e9 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -344,12 +344,26 @@
                 <div class="form-group">
                     <label>😊 เลือกอารมณ์</label>
                     <select id="moodSelect">
-                        <option value="สดใส แจ่มใส มีความสุข">สดใส</option>
-                        <option value="ขี้เล่น กวนๆ ซน">กวนๆ</option>
-                        <option value="เศร้า ท้อแท้">เศร้า</option>
-                        <option value="โกรธ ไม่พอใจ">โกรธ</option>
-                        <option value="ตื่นเต้น กระตือรือร้น">ตื่นเต้น</option>
-                        <option value="รักๆ ใคร่ๆ น่ารัก">น่ารัก</option>
+                        <option value="สดใส แจ่มใส มีความสุข">😊 สดใส</option>
+                        <option value="ขี้เล่น กวนๆ ซน">😜 กวนๆ</option>
+                        <option value="เศร้า ท้อแท้">😢 เศร้า</option>
+                        <option value="โกรธ ไม่พอใจ">😠 โกรธ</option>
+                        <option value="ตื่นเต้น กระตือรือร้น">🤩 ตื่นเต้น</option>
+                        <option value="รักๆ ใคร่ๆ น่ารัก">🥰 น่ารัก</option>
+                        <option value="หัวเราะ ขำขัน ตลก">😂 ขำขัน</option>
+                        <option value="เหนื่อย ง่วงนอน อ่อนล้า">😴 ง่วงนอน</option>
+                        <option value="ประหลาดใจ ตกใจ แปลกใจ">😲 ประหลาดใจ</option>
+                        <option value="เจ็บปวด ไม่สบาย">🤕 เจ็บป่วย</option>
+                        <option value="คิดถึง รอคอย หวังหา">🥺 คิดถึง</option>
+                        <option value="ชื่นชม ประทับใจ">😍 ชื่นชม</option>
+                        <option value="เย็น สบาย ผ่อนคลาย">😎 สบายๆ</option>
+                        <option value="ร้องไห้ เสียใจมาก">😭 ร้องไห้</option>
+                        <option value="แอบมอง แอบดู">👀 แอบมอง</option>
+                        <option value="ส่ายหัว ปฏิเสธ ไม่เอา">🙅 ไม่เอา</option>
+                        <option value="ชนะ ยินดี เฮ">🎉 ชนะแล้ว</option>
+                        <option value="อาย ขายหน้า เขิน">😳 อายจัง</option>
+                        <option value="เย้ย ล้อเลียน">😏 เย้ย</option>
+                        <option value="หิว อยากกิน">🤤 หิวแล้ว</option>
                     </select>
                 </div>
 
@@ -468,7 +482,21 @@
                 'เศร้า ท้อแท้': 'Sad, melancholic expression with tears or down-turned mouth',
                 'โกรธ ไม่พอใจ': 'Angry, upset expression with furrowed brows',
                 'ตื่นเต้น กระตือรือร้น': 'Excited, energetic expression with sparkling eyes',
-                'รักๆ ใคร่ๆ น่ารัก': 'Cute, lovely expression with hearts or blushing cheeks'
+                'รักๆ ใคร่ๆ น่ารัก': 'Cute, lovely expression with hearts or blushing cheeks',
+                'หัวเราะ ขำขัน ตลก': 'Laughing hard, hilarious, funny expression with wide smile',
+                'เหนื่อย ง่วงนอน อ่อนล้า': 'Tired, sleepy, drowsy expression with closed or droopy eyes',
+                'ประหลาดใจ ตกใจ แปลกใจ': 'Surprised, shocked, amazed expression with wide open eyes',
+                'เจ็บปวด ไม่สบาย': 'Sick, painful, unwell expression with bandage or thermometer',
+                'คิดถึง รอคอย หวังหา': 'Missing someone, longing, yearning expression with puppy eyes',
+                'ชื่นชม ประทับใจ': 'Admiring, impressed, heart-eyes expression',
+                'เย็น สบาย ผ่อนคลาย': 'Cool, relaxed, chill expression with sunglasses',
+                'ร้องไห้ เสียใจมาก': 'Crying heavily, very sad with streaming tears',
+                'แอบมอง แอบดู': 'Peeking, sneaking a look, curious glance',
+                'ส่ายหัว ปฏิเสธ ไม่เอา': 'Refusing, rejecting, saying no with hand gesture',
+                'ชนะ ยินดี เฮ': 'Winning, celebrating, victorious with confetti',
+                'อาย ขายหน้า เขิน': 'Shy, embarrassed, blushing with hands on face',
+                'เย้ย ล้อเลียน': 'Teasing, mocking, smirking expression',
+                'หิว อยากกิน': 'Hungry, drooling, craving food expression'
             };
 
             const toneDesc = moodMap[mood] || mood;
@@ -481,7 +509,7 @@
                                         - Art Style: REALISTIC with photographic quality, detailed textures, natural lighting and shadows
                                         - Character should look lifelike and three-dimensional with realistic fur/skin/fabric textures
                                         - Add a thick white border/outline around the entire character for sticker effect
-                                        - Background: SOLID PURE WHITE (#FFFFFF) - no gradients, no shadows on background
+                                        - Background: SOLID BRIGHT GREEN (#00FF00 or chroma key green) - pure green screen background for easy removal
                                         - Centered composition with character taking up most of the frame
                                         - High detail and clarity
                                         - NO TEXT, NO WORDS, NO TYPOGRAPHY anywhere in the image
@@ -557,6 +585,9 @@
             const generatedImageBase64 = imagePart.inline_data.data;
             const mimeType = imagePart.inline_data.mime_type || imagePart.inline_data.mimeType || 'image/png';
             let imageUrl = `data:${mimeType};base64,${generatedImageBase64}`;
+            
+            // Remove green background
+            imageUrl = await removeGreenBackground(imageUrl);
 
             // Add text if provided
             if (text) {
@@ -564,6 +595,63 @@
             }
 
             return imageUrl;
+        }
+
+        async function removeGreenBackground(imageUrl) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+
+                    // Draw the image
+                    ctx.drawImage(img, 0, 0);
+
+                    // Get image data
+                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    const data = imageData.data;
+
+                    // More flexible green screen detection
+                    // Loop through all pixels
+                    for (let i = 0; i < data.length; i += 4) {
+                        const r = data[i];
+                        const g = data[i + 1];
+                        const b = data[i + 2];
+                        
+                        // Calculate if pixel is predominantly green
+                        // Green should be significantly higher than red and blue
+                        const isGreen = g > r && g > b && 
+                                       (g - r) > 30 && 
+                                       (g - b) > 30;
+                        
+                        if (isGreen) {
+                            // Calculate how "pure green" this pixel is
+                            const greenDominance = Math.min((g - r) + (g - b), 255) / 255;
+                            
+                            if (greenDominance > 0.3) {
+                                // Make it transparent
+                                data[i + 3] = 0;
+                            } else if (greenDominance > 0.15) {
+                                // Feather edges: semi-transparent for smooth edges
+                                const alpha = 1 - (greenDominance / 0.3);
+                                data[i + 3] = Math.floor(data[i + 3] * alpha);
+                            }
+                        }
+                    }
+
+                    // Put the modified image data back
+                    ctx.putImageData(imageData, 0, 0);
+
+                    resolve(canvas.toDataURL('image/png'));
+                };
+
+                img.onerror = () => resolve(imageUrl); // If error, return original
+                img.src = imageUrl;
+            });
         }
 
         async function addTextToImage(imageUrl, text) {
@@ -594,7 +682,7 @@
 
                     // Position: center horizontally, at 85% from top (integrated with sticker)
                     const x = canvas.width / 2;
-                    const y = canvas.height * 0.75;
+                    const y = canvas.height * 0.85;
 
                     // Draw white outline/stroke for text (very thick for visibility)
                     ctx.strokeStyle = 'white';
